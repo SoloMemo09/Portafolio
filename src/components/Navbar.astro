@@ -1,0 +1,42 @@
+---
+const currentPath = Astro.url.pathname;
+const navLinks = [
+  { name: 'Inicio', path: '/' },
+  { name: 'Proyectos', path: '/projects' },
+  { name: 'Sobre Mí', path: '/about' },
+];
+---
+
+<header class="sticky top-0 z-50 w-full backdrop-blur-md bg-dark-bg/80 border-b border-dark-border">
+  <div class="container mx-auto px-4 md:px-8 h-16 flex items-center justify-between">
+    <a href="/" class="text-xl font-bold text-white flex items-center gap-2">
+      <span class="text-neon-purple">&lt;/&gt;</span>
+      Carlos Chin
+    </a>
+    
+    <nav class="hidden md:flex gap-6">
+      {navLinks.map((link) => (
+        <a 
+          href={link.path} 
+          class={`text-sm font-medium transition-colors hover:text-white ${currentPath === link.path ? 'text-white' : 'text-gray-400'}`}
+        >
+          {link.name}
+        </a>
+      ))}
+    </nav>
+
+    <div class="flex items-center gap-4">
+      <a 
+        href="/CV-Carlos-Chin.pdf" 
+        download="CV-Carlos-Chin.pdf" 
+        target="_blank" 
+        class="hidden md:inline-flex px-4 py-2 text-sm font-medium rounded-md bg-neon-purple/10 text-neon-purple border border-neon-purple/20 hover:bg-neon-purple/20 transition-all"
+      >
+        Descargar CV
+      </a>
+      <button class="md:hidden text-gray-400 hover:text-white">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>

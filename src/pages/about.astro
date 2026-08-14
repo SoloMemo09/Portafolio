@@ -1,0 +1,176 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Sobre Mí | Carlos Chin">
+  <div class="container mx-auto px-4 md:px-8 py-24 max-w-4xl">
+    <div class="flex flex-col md:flex-row gap-12 items-start mb-16">
+      <div class="flex-1">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">Sobre Mí</h1>
+        <p class="text-gray-400 text-lg leading-relaxed mb-6">
+          Soy estudiante activo de <strong
+            >Ingeniería en Sistemas Computacionales</strong
+          > en Mérida, Yucatán, México. Me enfocó en <strong
+            >desarrollo web full-stack, redes y automatización</strong
+          >, con una fuerte pasión por la ciberseguridad.
+        </p>
+        <p class="text-gray-400 text-lg leading-relaxed">
+          Tengo experiencia práctica diseñando e implementando plataformas,
+          arquitecturas en la nube, y automatizando procesos para el sector
+          gubernamental y privado. Destaco por mi capacidad para crear
+          documentación técnica detallada, mi comunicación asertiva y mi
+          adaptabilidad al trabajar bajo presión.
+        </p>
+      </div>
+      <div
+        class="w-48 h-48 rounded-2xl overflow-hidden border border-dark-border flex-shrink-0 shadow-[0_0_30px_rgba(147,51,234,0.15)] hidden md:block"
+      >
+        <img
+          src="/images/FotoPerfil.jpeg"
+          alt="Carlos Chin"
+          class="w-full h-full object-cover"
+        />
+      </div>
+    </div>
+
+    <!-- Habilidades Técnicas -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold mb-8 flex items-center gap-3">
+        <span class="text-neon-purple">#</span> Habilidades Técnicas
+      </h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="p-6 rounded-xl bg-dark-surface border border-dark-border">
+          <h3 class="text-xl font-bold mb-4 text-white">
+            Desarrollo Frontend & Backend
+          </h3>
+          <p class="text-gray-400 mb-4">
+            Experiencia construyendo aplicaciones completas desde la base de
+            datos hasta la interfaz visual.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            {
+              [
+                "Python",
+                "Node.js",
+                "Astro",
+                "JavaScript",
+                "PHP",
+                "HTML5",
+                "CSS3",
+              ].map((skill) => (
+                <span class="px-3 py-1 rounded-md bg-dark-bg border border-dark-border text-sm font-medium">
+                  {skill}
+                </span>
+              ))
+            }
+          </div>
+        </div>
+
+        <div class="p-6 rounded-xl bg-dark-surface border border-dark-border">
+          <h3 class="text-xl font-bold mb-4 text-white">
+            Ciberseguridad y Redes
+          </h3>
+          <p class="text-gray-400 mb-4">
+            Análisis de vulnerabilidades, auditorías y diseño de topologías
+            seguras.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            {
+              [
+                "Wireshark",
+                "Kali Linux",
+                "ISO 27001",
+                "Máquinas Virtuales",
+                "Planos de Red",
+              ].map((skill) => (
+                <span class="px-3 py-1 rounded-md bg-dark-bg border border-dark-border text-sm font-medium">
+                  {skill}
+                </span>
+              ))
+            }
+          </div>
+        </div>
+
+        <div class="p-6 rounded-xl bg-dark-surface border border-dark-border">
+          <h3 class="text-xl font-bold mb-4 text-white">
+            Automatización y DevOps
+          </h3>
+          <p class="text-gray-400 mb-4">
+            Creación de flujos de trabajo eficientes y gestión de versiones.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            {
+              ["n8n", "Git", "GitHub", "CI/CD"].map((skill) => (
+                <span class="px-3 py-1 rounded-md bg-dark-bg border border-dark-border text-sm font-medium">
+                  {skill}
+                </span>
+              ))
+            }
+          </div>
+        </div>
+
+        <div class="p-6 rounded-xl bg-dark-surface border border-dark-border">
+          <h3 class="text-xl font-bold mb-4 text-white">Software y Diseño</h3>
+          <p class="text-gray-400 mb-4">
+            Manejo de herramientas creativas para complementar el desarrollo.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            {
+              [
+                "Adobe Illustrator",
+                "Adobe Animate",
+                "DaVinci Resolve",
+                "Figma",
+              ].map((skill) => (
+                <span class="px-3 py-1 rounded-md bg-dark-bg border border-dark-border text-sm font-medium">
+                  {skill}
+                </span>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Educación y Soft Skills -->
+    <section>
+      <h2 class="text-2xl font-bold mb-8 flex items-center gap-3">
+        <span class="text-neon-purple">#</span> Educación y Certificaciones
+      </h2>
+      <div
+        class="p-8 rounded-xl bg-dark-surface border border-dark-border mb-8 relative overflow-hidden"
+      >
+        <div
+          class="absolute right-0 top-0 w-32 h-32 bg-neon-purple/5 blur-[50px]"
+        >
+        </div>
+        <div
+          class="flex flex-col md:flex-row justify-between items-start md:items-center mb-2"
+        >
+          <h3 class="text-xl font-bold">
+            Ingeniería en Sistemas Computacionales
+          </h3>
+          <span class="text-neon-blue font-medium mt-2 md:mt-0"
+            >Estudiante Activo</span
+          >
+        </div>
+        <p class="text-gray-400 mb-6">Mérida, Yucatán, México</p>
+
+        <h4 class="font-bold mb-2">Idiomas</h4>
+        <ul class="list-disc list-inside text-gray-400 space-y-1 mb-6">
+          <li>Español (Nativo)</li>
+          <li>
+            Inglés (B1 Técnico) - Certificación CENNI (Oxford Placement Test)
+          </li>
+        </ul>
+
+        <h4 class="font-bold mb-2">Aptitudes Clave</h4>
+        <p class="text-gray-400">
+          Documentación técnica detallada, comunicación asertiva, trabajo
+          colaborativo en equipos multidisciplinarios y disposición para el
+          aprendizaje continuo.
+        </p>
+      </div>
+    </section>
+  </div>
+</Layout>
